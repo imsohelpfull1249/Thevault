@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+    <meta charset="UTF-8">
+    <title>University of Adelaide</title>
+    <style>
+
+        .topbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 12px 0;
+        }
+        .topbar .nav {
+            display: flex;
+            gap: 10px;
+        }
+        .topbar .nav a {
+            background: rgba(255,255,255,0.04);
+            color: #ffffff;
+            padding: 8px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            transition: 0.25s ease;
+        }
+        .topbar .nav a:hover {
+            background: rgba(255,255,255,0.10);
+            transform: translateY(-3px);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #222;
+            color: #fff;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 24px;
+            justify-items: center;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 1280px;
+            padding: 0 16px;
+        }
+
+        /* 🟩 SEARCH BAR */
+        .search-container {
+            margin-top: 18px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .search-input {
+            width: 720px;
+            max-width: calc(100% - 40px);
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        .search-input::placeholder { color: rgba(255,255,255,0.55); }
+
+        .no-results {
+            margin-top: 18px;
+            color: #ff6b6b;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* 🟦 GAME CARD BASE STYLE */
+        .game-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2em;
+            width: 100%;
+            max-width: 220px;
+            transition: transform 0.25s ease, filter 0.25s ease;
+        }
+
+        .game-link img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        /* 🟪 HOVER EFFECTS ADDED */
+        .game-link:hover {
+            transform: translateY(-6px);
+            filter: brightness(1.08);
+        }
+
+        .game-link:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 6px 22px rgba(255, 255, 255, 0.25);
+        }
+
+        .game-link:hover div {
+            text-decoration: underline;
+            filter: brightness(1.2);
+        }
+
+        /* Credits/footer */
+        .credits {
+            margin-top: 40px;
+            padding: 18px 24px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 8px;
+            max-width: 1000px;
+            color: rgba(255,255,255,0.85);
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .credits h2 { margin: 0 0 6px 0; font-size: 1.05em; color: #ffd700; }
+        .credits p { margin: 0 0 8px 0; }
+        .credits ul { margin: 6px 0 0 18px; padding: 0; }
+        .credits li { margin: 4px 0; }
+        .credits a { color: #ffd700; text-decoration: none; }
+        .credits a:hover { text-decoration: underline; }
+
+    </style>
+</head>
+<body>
+    <h1>Walrus</h1>
+
+    <header class="topbar">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="gamepage.html">Games</a>
+            <a href="apps.html">Apps</a>
+            <a href="https://funnygang1248.github.io/Tutorial/" target="_blank">Good game IT. good game.</a>
+        </nav>
+    </header>
+    
+    <div class="center-content">
+        <p>We love baby shark</p>
+
+        <div class="game-list">
+
+            <a class="game-link" href="hollowknight.html">
+                <img src="hollowknight.png" alt="Hollow Knight Cover">
+                <div>Hollow Knight</div>
+            </a>
+
+            <a class="game-link" href="buckshotroulette.html">
+                <img src="buckshotroulette.jpg" alt="Buckshot Roulette Cover">
+                <div>Buckshot Roulette</div>
+            </a>
+
+            <a class="game-link" href="untitledgoosegame.html">
+                <img src="untitledgoosegame.webp" alt="Untitled Goose Game Cover">
+                <div>Untitled Goose Game</div>
+            </a>
+
+            <a class="game-link" href="ultrakillgame.html">
+                <img src="ultrakill.jpg" alt="Ultrakill Cover">
+                <div>Ultrakill</div>
+            </a>
+
+            <a class="game-link" href="slimerancher.html">
+                <img src="slimerancher.jpg" alt="Slime Rancher Cover">
+                <div>Slime Rancher</div>
+            </a>
+
+            <a class="game-link" href="celestegame.html">
+                <img src="celeste.png" alt="Celeste Cover">
+                <div>Celeste</div>
+            </a>
+            
+            <a class="game-link" href="terrariagame.html">
+                <img src="terraria.png" alt="Terraria Cover">
+                <div>Terraria</div>
+            </a>
+
+        </div>
+
+    <center-content>
+       <h2>Credits to GN-Math, Truffled, Ultimate Game Stash and him</h2>
+
+        <script>
+            (function(){
+                const list = document.querySelector('.game-list');
+                if(!list) return;
+
+                const items = Array.from(list.querySelectorAll('.game-link'));
+                items.sort((a,b) => {
+                    const ta = (a.textContent || '').trim().toLowerCase();
+                    const tb = (b.textContent || '').trim().toLowerCase();
+                    return ta.localeCompare(tb, undefined, {numeric: true});
+                });
+
+                items.forEach(i => list.appendChild(i));
+            })();
+        </script>
+
+</body>
+</html>
+
